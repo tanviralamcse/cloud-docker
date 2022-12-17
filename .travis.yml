@@ -11,15 +11,16 @@ script:
 
 deploy:
   provider: elasticbeanstalk
-  region: "ap-northeast-1"
+  region: "ca-central-1"
   app: "docker"
   env: "Docker-env"
-  bucket_name: "elasticbeanstalk-ap-northeast-1-687141240283"
+  access_key_id: $AWS_ACCESS_KEY
+  secret_access_key: $AWS_SECRET_KEY
+  bucket_name: "tanvirdockerbucket"
   bucket_path: "docker"
   on:
     branch: master
-  access_key_id: $AWS_ACCESS_KEY
-  secret_access_key: "$AWS_SECRET_KEY"
+
 
 
 
